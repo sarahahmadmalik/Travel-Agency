@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100vh;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: transparent;
+  height: 80px;
+  width: 100%;
+  padding: 0px 30px;
+  z-index: 999;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  width: 100%;
+}
+
+.logo h1 {
+  font-family: Poppins;
+  font-weight: 900;
+  font-size: 2rem;
+  cursor: pointer;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon img {
+  height: 30px;
+  width: 30px;
+}
+
+.nav-elements {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-elements li {
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-item:not(:last-child) {
+  margin-left: 10px;
+}
+
+.nav-elements li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: 0; /* Set the distance of the underline from the link */
+  left: 10px;
+  /* Set the height of the underline */
+  background-color: rgb(
+    61,
+    106,
+    255
+  ); /* Set the color of the underline */ /* Set the initial opacity to 0 */
+  transition: 0.3s;
+  border-radius: 3px; /* Set the transition duration */
+}
+
+.nav-elements li:hover:not(:last-child):after {
+  width: 80%;
+}
+
+.nav-elements li:focus:not(:last-child)::after {
+  width: 80%;
+}
+
+button {
+  position: relative;
+  padding: 0.5rem 1rem;
+  width: 130px;
+  border-radius: 7px;
+  border: 2px solid rgb(61, 106, 255);
+  font-size: 1rem;
+  font-weight: 600;
+  background: transparent;
+  color: black;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+button:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+@media screen and (max-width: 880px) {
+  nav {
+    background-color: #fff;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    height: auto;
+  }
+
+  .container {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    padding: 10px 30px;
+    z-index: 9999;
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-elements {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+  }
+
+  .nav-elements.open {
+    background-color: #fff;
+    display: flex;
+    padding-bottom: 30px;
+    z-index: 999;
+  }
+
+  .nav-elements li::after {
+    display: none;
+  }
+
+  .nav-item {
+    width: 100%;
+    height: 30%;
+    padding: 30px 0px;
+    text-align: center;
+  }
+
+  .nav-item:not(:last-child) {
+    margin: 5px 0;
+  }
+
+  .nav-item:hover:not(:last-child) {
+    background: rgb(61, 106, 255);
+  }
+
+  button {
+    width: 40%;
+    height: 60px;
+  }
+}
