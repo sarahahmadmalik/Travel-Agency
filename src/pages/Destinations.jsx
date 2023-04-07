@@ -4,19 +4,26 @@ import ImageBanner from "../components/ImageBanner";
 import banner1 from "../assets/images/banner1.jpg";
 import Footer from "../components/Footer";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import Booking from "../components/Booking";
 
 function Destinations() {
-  const [email, setEmail] = useState('');
-  
-  let Data = require('../Tour.json');
+  let Data = require("../Tour.json");
 
-  const handleSubmit =(event) =>{
+
+  const [email, setEmail] = useState("");
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  const handleSubmit = (event) => {
     event.preventDefault();
     setEmail(event.target.value);
-    alert('Subscribed Sucessfully!');
-    setEmail('');
-  }
+    alert("Subscribed Sucessfully!");
+    setEmail("");
+  };
+
+  const handleCardClick = (card) => {
+    console.log(card);
+    setSelectedCard(card);
+  };
 
   return (
     <>
@@ -28,29 +35,44 @@ function Destinations() {
       />
       <div className="card-area">
         <div className="pre-title">
-          <h1>Explore Top Destinations</h1>
+          <h1>{selectedCard ? `${selectedCard.title}` : "Explore Top Destinations"}</h1>
         </div>
         <div className="cards">
-          <Link to={'/'}>
-          <TourCard data={Data}/>
-          </Link>
+          {!selectedCard &&
+            Data.map((each) => {
+              return (
+                <article className="each-card" key={each.id} onClick={() => handleCardClick(each)}>
+                  <TourCard data={each} />
+                </article>
+              );
+            })}
+
+          {selectedCard &&
+            selectedCard.tours.map((tour,index) => {
+              return <Booking data={tour} selected={selectedCard} index={index} />;
+            })}
+
         </div>
-          <form className="form" onSubmit={handleSubmit}>
-            <span class="title">Subscribe And Get Special Discounts.</span>
-            <p class="description">
-              Subscribe to our Newsletter and get special discouts on your tours
-            </p>
-            <div>
-              <input
-                placeholder="Enter your email"
-                type="email"
-                name="email"
-                id="email-address" value={email}onChange={(event) => setEmail(prevEmail => prevEmail=event.target.value)}
-              />
-              <button type="submit">Subscribe</button>
-            </div>
-          </form>
-        </div>
+        <form className="form" onSubmit={handleSubmit}>
+          <span className="title">Subscribe And Get Special Discounts.</span>
+          <p className="description">
+            Subscribe to our Newsletter and get special discouts on your tours
+          </p>
+          <div>
+            <input
+              placeholder="Enter your email"
+              type="email"
+              name="email"
+              id="email-address"
+              value={email}
+              onChange={(event) =>
+                setEmail((prevEmail) => (prevEmail = event.target.value))
+              }
+            />
+            <button type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
       <Footer />
     </>
   );

@@ -41,8 +41,8 @@
     height: 88%;
 }
 .contact-form {
-    display: flex;
     position: absolute;
+    display: flex;
     align-items: start;
     top: -10%;
     left: 5%;
@@ -93,7 +93,7 @@
     padding: 10px;
     border: none;
     border-radius: 5px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
   }
   
   .contact-form input:focus, .contact-form textarea:focus {
@@ -222,14 +222,12 @@
     }
    
     .contact-form{
-      align-items: start;
-        margin-top: 0;
         top: -13%;
         left: -10;
         width: 50%;
     }
 
-    .contact-form form button{
-      margin-top: 5px;
+    .contact-form button{
+      margin-top: 1rem;
     }
   }

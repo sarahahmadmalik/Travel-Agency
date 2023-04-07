@@ -77,7 +77,7 @@
     background-color: #000;
     /* you can put img url here  */
   
-    .card {
+    .each-card {
       position: relative;
       width: 250px;
       height: 300px;
@@ -162,11 +162,11 @@
       transition: opacity .5s;
     }
     
-    .card:hover .card_content {
+    .each-card:hover .card_content {
       transform: translateY(0);
     }
     
-    .card:hover .card_description {
+    .each-card:hover .card_description {
       opacity: 1;
       transition-delay: .25s;
     }
@@ -181,13 +181,11 @@
   .cards{
     display: flex;
     padding: 0.7rem 1rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
-  .cards a{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+  .cards a{}
 
   .pre-title h1{
     padding: 1.7rem 1rem;

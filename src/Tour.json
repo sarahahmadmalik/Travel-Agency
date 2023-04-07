@@ -5,10 +5,10 @@
     "text" : "Islamabad, Taxila and Murree Tours",
     "description" : "Any day trip will not only help you save time but money as well. Multi-day trips require a hotel/resort, even fancier ones, and an overnight stay on board, while on a day trip, you can return to your accommodation overnight or move to a cheaper area. If budget is one of your concerns, then any day trip from Pakistan is the perfect solution.",
     "tours": [
-      {"tour": "Murree, Nathia Gali and Ayubia Tour","Price":"2500"},
-      {"tour": "Pakistan Monument, LokVirsa and Islamabad Tour","price":"2500"},
-      {"tour": "Taxila Museum and Khanpur Dam", "price":"2500"},
-      {"tour": "Khewra Salt Mine Tour", "price":"2500"}
+      {"tour": "Murree, Nathia Gali and Ayubia Tour","price":"2500", "stay": "1 Day", "images" : "../assets/images/Nathiagali.jpg"},
+      {"tour": "Pakistan Monument, LokVirsa and Islamabad Tour","price":"2500", "stay": "1 Day", "images":"../assets/images/Monument1.jpg"},
+      {"tour": "Taxila Museum and Khanpur Dam", "price":"2500", "stay": "1 Day", "images":"../assets/images/Muesuem-2.jpg"},
+      {"tour": "Khewra Salt Mine Tour", "price":"2500", "stay": "1 Day", "images":"../assets/images/SaltMine.jpg"}
     ],
     "images": "../assets/images/Monument.jpg"
   },
@@ -20,13 +20,13 @@
     "images": "../assets/images/Valley2.jpg",
     "tours": [
         {
-            "tour": "Neelum Valley", "price":"6000", "stay": "3 Days 2 Nights"
+            "tour": "Neelum Valley", "price":"6000", "stay": "3 Days 2 Nights", "images":"../assets/images/Valley1.jpg"
         },
         {
-            "tour": "Ratti Gali", "price":"6000", "stay": "3 Days 2 Nights"
+            "tour": "Ratti Gali", "price":"6000", "stay": "3 Days 2 Nights", "images": "../assets/images/RattiGali.jpg"
         },
         {
-            "tour": "Muzaffrabad Tour", "price":"6000", "stay": "2 Days 2 Nights"
+            "tour": "Muzaffrabad Tour", "price":"6000", "stay": "2 Days 2 Nights", "images":"../assets/images/Muzaffarabad2.jpg"
         }
     ]
   },
@@ -37,10 +37,10 @@
     "description" : "Visit Naran Kaghan, Swat and Hunza Valley and enjoy the mesmerizing scenes of these Areas. Northern Areas Tours are always excited to the tourists when it comes to travel around Pakistan. Traveled Tours offer affordable Northern Areas tour packages to the tourists. We have a wide range of tour packages to fulfil your travel dreams.",
     "tours": [
         {
-            "tour":"Swat Valley and Kallam Tour", "price":"10000", "stay":"5 Days 4 Nights"
+            "tour":"Swat Valley and Kallam Tour", "price":"10000", "stay":"5 Days 4 Nights", "images":"../assets/images/swatt.jpg"
         },
         {
-            "tour": "Swat Valley and Mallam Jaba Tour", "price":"10000", "stay": "3 Days 2 Nights"
+            "tour": "Swat Valley and Mallam Jaba Tour", "price":"10000", "stay": "3 Days 2 Nights", "images":"../assets/images/Malam.jpg"
         }
     ],
     "images": "../assets/images/Hunza.jpg"

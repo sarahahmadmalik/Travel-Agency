@@ -1,26 +1,22 @@
+
 import "../styles/DestinationCard.css";
 
 function TourCard(props) {
   
   return (
     <>
-    { props.data.map((data,index) => {
-      return(
-    <article class="card" key={index}>
       <div
-        class="temporary_text"
-        style={{ backgroundImage: `url(${data.images})`}}
+        className="temporary_text"
+        style={{ backgroundImage: `url(${props.data.images})`}}
       ></div>
-      <div class="card_content">
-        <span class="card_title">{data.title}</span>
-        <span class="card_subtitle">{data.text}.</span>
-        <p class="card_description">
-          {data.description}
+      <div className="card_content">
+        <span className="card_title">{props.data.title}</span>
+        <span className="card_subtitle">{props.data.text}.</span>
+        <p className="card_description">
+          {props.data.description}
         </p>
       </div>
-    </article>
-)})}
-    </>
+      </>
   );
 }
 
