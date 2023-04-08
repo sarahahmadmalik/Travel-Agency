@@ -38,6 +38,7 @@ function Destinations() {
           <h1>{selectedCard ? `${selectedCard.title}` : "Explore Top Destinations"}</h1>
         </div>
         <div className="cards">
+          <div id="card">
           {!selectedCard &&
             Data.map((each) => {
               return (
@@ -52,6 +53,8 @@ function Destinations() {
               return <Booking data={tour} selected={selectedCard} index={index} />;
             })}
 
+          </div>
+        
         </div>
         <form className="form" onSubmit={handleSubmit}>
           <span className="title">Subscribe And Get Special Discounts.</span>
