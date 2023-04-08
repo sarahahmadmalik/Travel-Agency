@@ -1,10 +1,10 @@
-import TourCard from "./components/TourCard";
-import Nav from "./components/Nav";
-import ImageBanner from "./components/ImageBanner";
-import banner1 from "./assets/images/banner1.jpg";
-import Footer from "./components/Footer";
+import TourCard from "../components/TourCard";
+import Nav from "../components/Nav";
+import ImageBanner from "../components/ImageBanner";
+import banner1 from "../assets/images/banner1.jpg";
+import Footer from "../components/Footer";
 import { useState } from "react";
-import Booking from "./components/Booking";
+import Booking from "../components/Booking";
 
 function Destinations() {
   let Data = require("./Tour.json");

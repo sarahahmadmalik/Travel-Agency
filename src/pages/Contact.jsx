@@ -1,7 +1,7 @@
-import Footer from "./components/Footer";
-import Nav from "./components/Nav";
-import "./styles/Contact.css";
-import support from "./assets/images/support.gif";
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
+import "../styles/Contact.css";
+import support from "../assets/images/support.gif";
 import { useState } from "react";
 
 function Contact() {
