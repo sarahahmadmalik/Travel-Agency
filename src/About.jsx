@@ -1,8 +1,8 @@
-import ImageBanner from "../components/ImageBanner"
-import Nav from "../components/Nav"
-import AboutImage from '../assets/images/12.jpg'
-import '../styles/About.css'
-import Footer from "../components/Footer"
+import ImageBanner from "./components/ImageBanner"
+import Nav from "./components/Nav"
+import AboutImage from './assets/images/12.jpg'
+import './styles/About.css'
+import Footer from "./components/Footer"
 function About() {
   return (
     <>
