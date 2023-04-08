@@ -31,3 +31,43 @@
     background-color: aliceblue;
     border: 2px solid rgba(135, 61, 255, 0.954);
 }
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .texts h1 {
+        font-size: 3em;
+    }
+    
+    .texts p:nth-child(1) {
+        font-size: 2em;
+    }
+    
+    .texts p:nth-child(2) {
+        font-size: 1em;
+    }
+    
+    .contact button {
+        margin: 0 2%;
+        padding: 0.8em 1.6em;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .texts h1 {
+        font-size: 1rem;
+    }
+    
+    .texts p:nth-child(1) {
+        font-size: 1.5rem;
+    }
+    
+    .texts p:nth-child(2) {
+        font-size: 0.8em;
+    }
+    
+    .contact button {
+        margin: 0 1%;
+        padding: 0.6em 1.2em;
+        font-size: 0.8em;
+    }
+}
