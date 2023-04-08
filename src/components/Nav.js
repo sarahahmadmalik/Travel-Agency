@@ -22,7 +22,7 @@ function Nav() {
             </div>
             <div>
                 <ul className={`nav-elements ${isOpen ? 'open': 'nav-elements'}`}>
-                    <li className='nav-item'><Link to={'/Home'}>Home</Link></li>
+                    <li className='nav-item'><Link to={'/'}>Home</Link></li>
                     <li className='nav-item'><Link to={'/Destinations'}>Destinations</Link></li>
                     <li className='nav-item'><Link to={'/About'}>About</Link></li>
                     <li className='nav-item'><Link to={'/Contact'}>Contact</Link></li>
