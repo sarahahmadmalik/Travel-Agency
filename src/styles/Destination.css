@@ -32,6 +32,8 @@
 
 }
 
+
+
 .des-text{
     width: 40%;
     text-align: justify;
@@ -70,15 +72,36 @@
     right: 0;
 }
 @media screen and (min-width: 851px) and (max-width: 990px) {
+    .destination h1{
+        font-size: 2.5rem;
+    }
+    .destination{
+        margin: 4rem 3rem;
+    }
     .image img {
-        width: 61%;
+        width: 57%;
+        height: 270px;
         margin: 0;
         }
 
         .image img:nth-child(2){
             position: absolute;
             top: 10%;
-            right: -16%;
+            right: -10%;
+        }
+        .first-des-reverse {
+            margin-left: -1.5rem;
+        }
+        .first-des-reverse .des-text h2{
+            text-align: right;
+        }
+
+        .first-des-reverse .des-text{
+            margin-right: -1rem;
+        }
+
+        .first-des-reverse .des-text p{
+            padding-left: 2rem;
         }
 }
 
