@@ -7,7 +7,7 @@ import { useState } from "react";
 import Booking from "./components/Booking";
 
 function Destinations() {
-  let Data = require("../Tour.json");
+  let Data = require("./Tour.json");
 
 
   const [email, setEmail] = useState("");
