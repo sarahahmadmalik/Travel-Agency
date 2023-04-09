@@ -37,6 +37,19 @@
         padding: 1rem 1rem ;
     }
 
+    @media screen and (min-width: 1440px){
+      .banner-text{
+        transform: translate(-48%,30%);
+      }
+      .banner-text h1{
+        font-size: 4rem;
+      }
+
+      .banner-text p{
+        font-size: 2rem;
+      }
+    }
+
     @media screen and (max-width: 555px) {
         .banner-text h1 {
         padding: 5px 5px;
@@ -47,24 +60,36 @@
         }
         }
 
-        @media screen and (min-width: 555px)  and (max-width: 800px){
+        @media screen and (min-width: 556px)  and (max-width: 800px){
             .banner-text h1 {
               padding: 5px 5px;
               font-size: 2em;
             }
             .banner-text p {
               font-size: 1.3em;
-              padding: 1rem 1rem;
+              padding: 0.7rem 1rem;
+            }
+
+            .img-banner{
+              height: 35vh;
             }
           }
 
           @media screen and (max-width: 430px) {
             .banner-text h1 {
-              padding: 5px;
+              padding: 0 5px;
               font-size: 1.7rem;
             }
             .banner-text p {
               font-size: 1rem;
+              padding-top: 0rem;
+            }
+            .img-banner{
+              height: 35vh;
+            }
+
+            .banner-text{
+              top: 63%;
             }
             
           }
