@@ -1,9 +1,12 @@
 .about-container {
-    margin: 1rem 4rem;
+    background-color: rgb(241, 244, 246);
     }
 
+  
+
     .about-container div{
-        margin: 2rem 3rem;
+        padding: 2% 6%;
+        text-align: justify;
     }
     .about-container h2{
     font-size: 2.5rem;
@@ -13,7 +16,7 @@
 
     .about-container p{
         font-size: 19px;
-        line-height: 2rem;
+        line-height: 2.6rem;
     }
     
     .about-container ul{
@@ -23,19 +26,21 @@
     .about-container ul li{
         list-style: none;
         line-height: 2rem;
+        font-size: 1.2rem;
+        font-weight: bold;
     }
 
     @media screen and (max-width: 768px) {
         .about-container {
-          margin: 1rem 1.5rem;
+          padding: 0 4%;
         }
         
         .about-container div {
-          margin: 2rem 1rem;
+          padding: 2rem 1rem;
         }
         
         .about-container h2 {
-          font-size: 2rem;
+          font-size: 1.7rem;
         }
         
         .about-container p {
@@ -50,17 +55,19 @@
         
         .about-container ul li {
           line-height: 1.5rem;
+          font-size: 0.9rem;
+  
         }
       }
 
       /* Media query for screens between 769px and 900px */
 @media screen and (min-width: 769px) and (max-width: 900px) {
     .about-container {
-      margin: 1rem 3rem;
+      padding: 1rem 3rem;
     }
     
     .about-container div {
-      margin: 2rem;
+      padding: 2rem
     }
     
     .about-container h2 {
